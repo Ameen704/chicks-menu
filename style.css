@@ -895,6 +895,7 @@ button {
   box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.7);
   z-index: 200;
   padding: 10px 16px;
+  padding-bottom: max(10px, env(safe-area-inset-bottom));
 }
 
 .floating-inner {
@@ -1193,6 +1194,9 @@ button {
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
+  body {
+    padding-bottom: calc(135px + env(safe-area-inset-bottom, 0px));
+  }
   .brand-arabic {
     font-size: 2.1rem;
   }
@@ -1209,6 +1213,12 @@ button {
   .call-options-group {
     width: 100%;
   }
+  .bill-summary-trigger {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* Phone number digit alignment */
 .phone-num, bdi {
   direction: ltr !important;
