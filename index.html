@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>CHicks | شِيكس - المنيو الإلكتروني الرسمي | طامية - الفيوم</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="منيو مطعم CHicks شِيكس الرسمي بطامية الفيوم. بروست مقرمش، مشويات على الفحم، طواجن فخار، وكريب على مزاجك. تصفح الأصناف واطلب دليفري فوراً." />
+  <meta property="og:title" content="CHicks شِيكس | The King of Crunch" />
+  <meta property="og:description" content="مشويات على الأصول … وبروست مقرمش .. وكريب على مزاجك. طعم يجمعنا ولمّة تحلى بينا." />
+  <meta property="og:image" content="assets/mascot.jpg" />
+  <meta property="og:type" content="restaurant.menu" />
+  <meta name="theme-color" content="#0c0203" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+       HERO HEADER SECTION
+       ========================================== -->
+  <header class="hero-header">
+    <div class="hero-banner-backdrop" style="background-image: url('assets/broast_family.jpg');"></div>
+    
+    <div class="container hero-content">
+      <!-- Status Badge -->
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>المطعم مفتوح الآن • طلبات الدليفري والصالة متاحة</span>
+      </div>
+
+      <!-- Brand Identity -->
+      <div class="brand-identity">
+        <div class="mascot-avatar-wrap">
+          <img src="assets/mascot.jpg" alt="CHicks شِيكس" class="mascot-img" />
+        </div>
+        <div class="brand-title-wrap">
+          <span class="brand-english">CHiCKS</span>
+          <h1 class="brand-arabic">شِــيـــكْـــس</h1>
+          <div class="brand-slogan">👑 The King of Crunch • مش جاي يهزر!</div>
+          <div class="brand-pillars">
+            <span>🍗 بروست مقرمش</span>
+            <span class="pillar-sep">•</span>
+            <span>🥩 مشويات عالفحم</span>
+            <span class="pillar-sep">•</span>
+            <span>🍲 طواجن فخار</span>
+            <span class="pillar-sep">•</span>
+            <span>🌯 كريب ع مزاجك</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Location & Working Hours Info -->
+      <div class="quick-meta-list">
+        <div class="meta-item">
+          <span>📍</span>
+          <span>الفيوم - مركز طامية - بجوار منتجع الحياة</span>
+        </div>
+        <div class="meta-item">
+          <span>⏰</span>
+          <span>يومياً: 11:00 صباحاً - 2:00 بعد منتصف الليل</span>
+        </div>
+      </div>
+
+      <!-- Fast Action Buttons (Calls, QR, WhatsApp) -->
+      <div class="header-actions">
+        <a href="tel:01033326066" class="action-btn btn-call-primary" id="btnHeaderVoda">
+          <span>📞</span>
+          <bdi class="phone-num">010 333 2 60 66</bdi>
+        </a>
+        <a href="tel:01111168516" class="action-btn btn-call-secondary" id="btnHeaderOrange">
+          <span>📞</span>
+          <bdi class="phone-num">011 111 68 516</bdi>
+        </a>
+        <button class="action-btn btn-outline btn-qr open-qr-modal" id="btnOpenQrModal">
+          <span>📱</span>
+          <span>كود المنيو (QR)</span>
+        </button>
+        <a href="https://wa.me/201033326066?text=%D9%85%D8%B3%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AE%D9%8A%D8%B1%D8%8C%20%D9%83%D9%86%D8%AA%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%AF%D9%84%D9%8A%D9%81%D8%B1%D9%8A%20%D9%85%D9%86%20%D9%85%D8%B7%D8%B9%D9%85%20%D8%B4%D9%8A%D9%83%D8%B3" 
+           target="_blank" rel="noopener noreferrer" class="action-btn btn-outline" id="btnHeaderWhatsApp">
+          <span>💬</span>
+          <span>واتساب المطعم</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       STICKY SEARCH & CATEGORY NAVIGATION
+       ========================================== -->
+  <nav class="sticky-nav-wrapper" id="stickyNav">
+    <div class="container">
+      <!-- Search Box -->
+      <div class="search-box-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="menuSearchInput" class="search-input" placeholder="ابحث عن وجبة، بروست، مشويات، كريب، طاجن..." autocomplete="off" />
+        <button class="search-clear-btn" id="searchClearBtn" title="مسح">✕</button>
+      </div>
+
+      <!-- Categories Pills (Horizontally Scrollable) -->
+      <div class="category-pills-bar" id="categoryPillsBar">
+        <button class="cat-pill active" data-category="all">
+          <span>✨</span>
+          <span>الكل</span>
+        </button>
+        <button class="cat-pill" data-category="broast">
+          <span>🍗</span>
+          <span>وجبات البروست</span>
+          <span class="cat-pill-count">7</span>
+        </button>
+        <button class="cat-pill" data-category="grills">
+          <span>🥩</span>
+          <span>مشوياتنا</span>
+          <span class="cat-pill-count">8</span>
+        </button>
+        <button class="cat-pill" data-category="casseroles">
+          <span>🍲</span>
+          <span>الطواجن</span>
+          <span class="cat-pill-count">6</span>
+        </button>
+        <button class="cat-pill" data-category="crepes">
+          <span>🌯</span>
+          <span>الكريب وإضافاته</span>
+          <span class="cat-pill-count">13</span>
+        </button>
+        <button class="cat-pill" data-category="sides">
+          <span>🍟</span>
+          <span>الإضافات والسلطات</span>
+          <span class="cat-pill-count">9</span>
+        </button>
+        <button class="cat-pill" data-category="drinks">
+          <span>🥤</span>
+          <span>مشروبات</span>
+          <span class="cat-pill-count">3</span>
+        </button>
+      </div>
+
+      <!-- Quick Filter Tags -->
+      <div class="filter-tags-row">
+        <button class="filter-tag active" data-filter="all">جميع الأصناف</button>
+        <button class="filter-tag" data-filter="bestseller">⭐ الأكثر طلباً</button>
+        <button class="filter-tag" data-filter="spicy">🔥 سبايسي وحار</button>
+        <button class="filter-tag" data-filter="family">👨‍👩‍👧‍👦 وجبات عائلية</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       MAIN MENU SECTIONS CONTAINER
+       ========================================== -->
+  <main class="container menu-container" id="menuMainContent">
+
+    <!-- No Results Placeholder -->
+    <div class="no-results" id="noResultsMsg">
+      <div class="no-results-icon">🍗🔍</div>
+      <h3>لم نجد أي صنف يطابق بحثك!</h3>
+      <p>جرّب البحث باسم وجبة أخرى أو اختر قسماً من الأقسام بالأعلى.</p>
+    </div>
+
+    <!-- SECTION 1: BROAST & STRIPS -->
+    <section class="menu-section" id="section-broast" data-category="broast">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">🍗</span>
+          <h2 class="section-title">وجبات البروست</h2>
+        </div>
+        <span class="section-badge-count">مقدم مع كل وجبة: أرز + مخلل + عيش</span>
+      </div>
+
+      <div class="dishes-grid">
+        <!-- 1 Piece -->
+        <article class="dish-card" data-id="b1" data-name="وجبة بروست 1 قطعة" data-desc="قطعة دجاج بروست مقرمش ذهبي خلطة شِيكس + أرز + مخلل + عيش" data-category="broast" data-price="85">
+          <div class="dish-image-wrap">
+            <img src="assets/broast_meal.jpg" alt="وجبة بروست 1 قطعة" class="dish-img" loading="lazy" />
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">وجبة بروست 1 قطعة</h3>
+            <div class="dish-price"><span class="price-val">85</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">قطعة دجاج بروست مقرمشة بخلطة شِيكس الغنية، يقدم معها طبق أرز ومخلل وعيش طازج.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍗 1 قطعة دجاج</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- 2 Pieces -->
+        <article class="dish-card" data-id="b2" data-name="وجبة بروست 2 قطعة" data-desc="2 قطعة دجاج بروست مقرمش ذهبي + أرز + مخلل + عيش" data-category="broast" data-tags="bestseller" data-price="110">
+          <div class="dish-image-wrap">
+            <img src="assets/broast_meal.jpg" alt="وجبة بروست 2 قطعة" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-bestseller">&#11088; &#1575;&#1604;&#1571;&#1603;&#1579;&#1585; &#1591;&#1604;&#1576;&#1575;&#1613;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">وجبة بروست 2 قطعة</h3>
+            <div class="dish-price"><span class="price-val">110</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">قطعتين دجاج بروست كرانشي ولذيذ، يقدم مع الأرز الشهي والمخلل والعيش الطازج.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍗 2 قطعة دجاج</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- 3 Pieces -->
+        <article class="dish-card" data-id="b3" data-name="وجبة بروست 3 قطع" data-desc="3 قطع دجاج بروست مقرمش ذهبي خلطة شِيكس + أرز + مخلل + عيش" data-category="broast" data-tags="bestseller,spicy" data-price="135">
+          <div class="dish-image-wrap">
+            <img src="assets/broast_meal.jpg" alt="وجبة بروست 3 قطع" class="dish-img" loading="lazy" />
+            <div class="dish-badges">
+              <span class="badge badge-bestseller">⭐ الأكثر طلباً</span>
+            </div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">وجبة بروست 3 قطع</h3>
+            <div class="dish-price"><span class="price-val">135</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">3 قطع دجاج بروست مقرمش بخلطة شِيكس الغنية بالقرمشة، مقدم معها أرز ومخلل وعيش سخن.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍗 3 قطع دجاج</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- Special -->
+        <article class="dish-card" data-id="b4" data-name="وجبة بروست اسبيشيال" data-desc="وجبة بروست اسبيشيال مميزة + أرز + مخلل + عيش" data-category="broast" data-tags="bestseller" data-price="185">
+          <div class="dish-image-wrap">
+            <img src="assets/broast_combo.jpg" alt="وجبة بروست اسبيشيال" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-bestseller">&#11088; &#1575;&#1604;&#1571;&#1603;&#1579;&#1585; &#1591;&#1604;&#1576;&#1575;&#1613;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">وجبة بروست اسبيشيال</h3>
+            <div class="dish-price"><span class="price-val">185</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">وجبة شِيكس الاسبيشيال الملكية لعشاق القرمشة الكثيفة، تقدم مع الأرز والمخلل والعيش.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>👑 وجبة اسبيشيال</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- Family 9 Pieces -->
+        <article class="dish-card" data-id="b5" data-name="وجبة بروست عائلية 9 قطع" data-desc="9 قطع بروست عائلي مقرمش + أرز عائلي + مخلل + عيش" data-category="broast" data-tags="family,bestseller" data-price="420">
+          <div class="dish-image-wrap">
+            <img src="assets/broast_family.jpg" alt="وجبة بروست عائلية 9 قطع" class="dish-img" loading="lazy" />
+            <div class="dish-badges">
+              <span class="badge badge-family">👨‍👩‍👧‍👦 عائلية توفير</span>
+            </div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">وجبة بروست عائلية (9 قطع)</h3>
+            <div class="dish-price"><span class="price-val">420</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">لمّة العيلة ما تكملش إلا ببروست شِيكس! 9 قطع دجاج مقرمش + سرفيس أرز عائلي كبير + مخلل + عيش.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>👨‍👩‍👧‍👦 9 قطع • تكفي 3-4 أفراد</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- Strips 4 Pieces -->
+        <article class="dish-card" data-id="b6" data-name="وجبة استربس 4 قطع" data-desc="4 أصابع صدور دجاج استربس مقرمشة خالية من العظم + أرز + مخلل + عيش" data-category="broast" data-tags="spicy" data-price="85">
+          <div class="dish-image-wrap">
+            <img src="assets/strips_meal.jpg" alt="وجبة استربس 4 قطع" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-spicy">&#128293; &#1587;&#1576;&#1575;&#1610;&#1587;&#1610; &#1608;&#1581;&#1575;&#1585;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">وجبة استربس 4 قطع</h3>
+            <div class="dish-price"><span class="price-val">85</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">أصابع صدور دجاج بيور مقرمشة بدون عظم، خفيفة وكرانشي مع الأرز والمخلل والعيش.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍗 4 قطع بدون عظم</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- Strips 6 Pieces -->
+        <article class="dish-card" data-id="b7" data-name="وجبة استربس 6 قطع" data-desc="6 أصابع صدور دجاج استربس مقرمشة + أرز + مخلل + عيش" data-category="broast" data-tags="bestseller" data-price="120">
+          <div class="dish-image-wrap">
+            <img src="assets/strips_meal.jpg" alt="وجبة استربس 6 قطع" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-bestseller">&#11088; &#1575;&#1604;&#1571;&#1603;&#1579;&#1585; &#1591;&#1604;&#1576;&#1575;&#1613;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">وجبة استربس 6 قطع</h3>
+            <div class="dish-price"><span class="price-val">120</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">6 قطع استربس دجاج مقرمش ذهبي سوبريم، وجبة مشبعة مع الأرز والمخلل والعيش.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍗 6 قطع استربس</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CHARCOAL GRILLS (WITH PORTION SELECTOR) -->
+    <section class="menu-section" id="section-grills" data-category="grills">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">🥩</span>
+          <h2 class="section-title">مشوياتنا (مشوياتنا ملهاش منافس)</h2>
+        </div>
+        <span class="section-badge-count">حدد الحجم (كامل • نص • ربع)</span>
+      </div>
+
+      <div class="dishes-grid">
+        <!-- 1. فرخة شواية -->
+        <article class="dish-card" data-base-id="g1" data-name="فرخة شواية" data-desc="دجاجة مشوية على الشواية بالسيخ متبلة بأشهى بهارات شِيكس" data-category="grills" data-tags="bestseller">
+          <div class="dish-image-wrap">
+            <img src="assets/chicken_shwaya.jpg" alt="فرخة شواية" class="dish-img" loading="lazy" />
+            <div class="dish-badges">
+              <span class="badge badge-bestseller">⭐ مشوي شواية</span>
+            </div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">فرخة شواية</h3>
+            <div class="dish-price"><span class="price-val">340</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">دجاج طازج مشوي على السيخ الدوار ومتحمر بأصوله، اختر الحجم المناسب:</p>
+          
+          <!-- Portion Selector -->
+          <div class="portion-selector">
+            <span class="portion-selector-label">اختر الحجم:</span>
+            <button type="button" class="portion-pill" data-portion="ربع" data-price="85">ربع • 85 ج.م</button>
+            <button type="button" class="portion-pill" data-portion="نص" data-price="175">نص • 175 ج.م</button>
+            <button type="button" class="portion-pill active" data-portion="كاملة" data-price="340">كاملة • 340 ج.م</button>
+          </div>
+
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍗 شواية على السيخ</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- 2. فرخة شيش -->
+        <article class="dish-card" data-base-id="g2" data-name="فرخة شيش" data-desc="دجاجة مفتوحة متبلة ومشوية على الفحم الحجري" data-category="grills" data-tags="bestseller">
+          <div class="dish-image-wrap">
+            <img src="assets/chicken_shish.jpg" alt="فرخة شيش" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-bestseller">&#11088; &#1575;&#1604;&#1571;&#1603;&#1579;&#1585; &#1591;&#1604;&#1576;&#1575;&#1613;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">فرخة شيش (عالفحم)</h3>
+            <div class="dish-price"><span class="price-val">340</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">دجاج شيش متبل ومفتوح مشوي على الفحم الحجري برائحة الشواء الأصلية:</p>
+          
+          <!-- Portion Selector -->
+          <div class="portion-selector">
+            <span class="portion-selector-label">اختر الحجم:</span>
+            <button type="button" class="portion-pill" data-portion="ربع" data-price="85">ربع • 85 ج.م</button>
+            <button type="button" class="portion-pill" data-portion="نص" data-price="175">نص • 175 ج.م</button>
+            <button type="button" class="portion-pill active" data-portion="كاملة" data-price="340">كاملة • 340 ج.م</button>
+          </div>
+
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🔥 مشوي فحم</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- 3. فرخة تكا -->
+        <article class="dish-card" data-base-id="g3" data-name="فرخة تكا" data-desc="دجاجة تكا متبلة بالتوابل الهندية الحارة ومشوية عالفحم" data-category="grills" data-tags="spicy">
+          <div class="dish-image-wrap">
+            <img src="assets/chicken_tikka.jpg" alt="فرخة تكا" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-spicy">&#128293; &#1587;&#1576;&#1575;&#1610;&#1587;&#1610; &#1608;&#1581;&#1575;&#1585;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">فرخة تكا</h3>
+            <div class="dish-price"><span class="price-val">360</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">تتبيلة تكا حمراء غنية بالنكهات والبهارات الشرقية والحرارة المشهية:</p>
+          
+          <!-- Portion Selector -->
+          <div class="portion-selector">
+            <span class="portion-selector-label">اختر الحجم:</span>
+            <button type="button" class="portion-pill" data-portion="ربع" data-price="90">ربع • 90 ج.م</button>
+            <button type="button" class="portion-pill" data-portion="نص" data-price="180">نص • 180 ج.م</button>
+            <button type="button" class="portion-pill active" data-portion="كاملة" data-price="360">كاملة • 360 ج.م</button>
+          </div>
+
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🌶️ تتبيلة تكا سبايسي</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- 4. كباب لحم -->
+        <article class="dish-card" data-base-id="g4" data-name="كباب" data-desc="كباب قطع لحم بلدي مشوية على الفحم الحجري" data-category="grills" data-tags="bestseller">
+          <div class="dish-image-wrap">
+            <img src="assets/kebab.jpg" alt="كباب" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-bestseller">&#11088; &#1575;&#1604;&#1571;&#1603;&#1579;&#1585; &#1591;&#1604;&#1576;&#1575;&#1613;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">كباب مشوي عالفحم</h3>
+            <div class="dish-price"><span class="price-val">325</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">قطع لحم بلدي طري ومتبل بالبصل والبهارات، مشوي على الفحم بدرجة استواء مثالية:</p>
+          
+          <!-- Portion Selector -->
+          <div class="portion-selector">
+            <span class="portion-selector-label">اختر الوزن:</span>
+            <button type="button" class="portion-pill active" data-portion="ربع كيلو" data-price="325">ربع ك • 325 ج.م</button>
+            <button type="button" class="portion-pill" data-portion="نص كيلو" data-price="650">نص ك • 650 ج.م</button>
+            <button type="button" class="portion-pill" data-portion="كيلو" data-price="1300">كيلو • 1300 ج.م</button>
+          </div>
+
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥩 لحم بلدي فاخر</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- 5. ريش ضاني -->
+        <article class="dish-card" data-base-id="g5" data-name="ريش ضاني" data-desc="ريش ضاني بلدي مشوية على الفحم بنكهة لا تقاوم" data-category="grills" data-tags="bestseller">
+          <div class="dish-image-wrap">
+            <img src="assets/ribs.jpg" alt="ريش ضاني" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-bestseller">&#11088; &#1575;&#1604;&#1571;&#1603;&#1579;&#1585; &#1591;&#1604;&#1576;&#1575;&#1613;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">ريش ضاني مشوية</h3>
+            <div class="dish-price"><span class="price-val">375</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">ريش ضاني بلدي دايبة مشوية على الفحم مع صدمة النار وتتبيلة شِيكس الخاصة:</p>
+          
+          <!-- Portion Selector -->
+          <div class="portion-selector">
+            <span class="portion-selector-label">اختر الوزن:</span>
+            <button type="button" class="portion-pill active" data-portion="ربع كيلو" data-price="375">ربع ك • 375 ج.م</button>
+            <button type="button" class="portion-pill" data-portion="نص كيلو" data-price="750">نص ك • 750 ج.م</button>
+            <button type="button" class="portion-pill" data-portion="كيلو" data-price="1500">كيلو • 1500 ج.م</button>
+          </div>
+
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍖 ريش ضاني بلدي</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- 6. طرب -->
+        <article class="dish-card" data-base-id="g6" data-name="طرب" data-desc="طرب بلدي مشوي عالفحم بخلطة التوابل والمناديل الضاني" data-category="grills" data-tags="bestseller">
+          <div class="dish-image-wrap">
+            <img src="assets/tarb.jpg" alt="طرب" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-bestseller">&#11088; &#1575;&#1604;&#1571;&#1603;&#1579;&#1585; &#1591;&#1604;&#1576;&#1575;&#1613;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">طرب مشوي</h3>
+            <div class="dish-price"><span class="price-val">200</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">طرب ضاني بلدي ملفوف على السيخ ومشوي على الجمر حتى يذوب بالفم:</p>
+          
+          <!-- Portion Selector -->
+          <div class="portion-selector">
+            <span class="portion-selector-label">اختر الوزن:</span>
+            <button type="button" class="portion-pill active" data-portion="ربع كيلو" data-price="200">ربع ك • 200 ج.م</button>
+            <button type="button" class="portion-pill" data-portion="نص كيلو" data-price="300">نص ك • 300 ج.م</button>
+            <button type="button" class="portion-pill" data-portion="كيلو" data-price="600">كيلو • 600 ج.م</button>
+          </div>
+
+          <div class="dish-footer">
+            <div class="dish-tags"><span>✨ طرب ضاني</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- 7. كفتة -->
+        <article class="dish-card" data-base-id="g7" data-name="كفتة" data-desc="كفتة لحم بلدي مشوية على الفحم الحجري" data-category="grills" data-tags="bestseller">
+          <div class="dish-image-wrap">
+            <img src="assets/kofta_hati.jpg" alt="كفتة" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-bestseller">&#11088; &#1575;&#1604;&#1571;&#1603;&#1579;&#1585; &#1591;&#1604;&#1576;&#1575;&#1613;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">كفتة مشوية عالفحم</h3>
+            <div class="dish-price"><span class="price-val">150</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">أصابع كفتة لحم بلدي مفرومة بالبهارات والخلطة الخاصة مشوية على الجمر:</p>
+          
+          <!-- Portion Selector -->
+          <div class="portion-selector">
+            <span class="portion-selector-label">اختر الوزن:</span>
+            <button type="button" class="portion-pill active" data-portion="ربع كيلو" data-price="150">ربع ك • 150 ج.م</button>
+            <button type="button" class="portion-pill" data-portion="نص كيلو" data-price="300">نص ك • 300 ج.م</button>
+            <button type="button" class="portion-pill" data-portion="كيلو" data-price="600">كيلو • 600 ج.م</button>
+          </div>
+
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥩 كفتة بلدي</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- 8. حواوشي -->
+        <article class="dish-card" data-id="g8" data-name="رغيف حواوشي عالفحم" data-desc="رغيف حواوشي بلدي باللحمة المفرومة والبهارات مشوي على الفحم" data-category="grills" data-tags="bestseller" data-price="60">
+          <div class="dish-image-wrap">
+            <img src="assets/hawawshi.jpg" alt="رغيف حواوشي عالفحم" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-bestseller">&#11088; &#1575;&#1604;&#1571;&#1603;&#1579;&#1585; &#1591;&#1604;&#1576;&#1575;&#1613;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">رغيف حواوشي عالفحم</h3>
+            <div class="dish-price"><span class="price-val">60</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">رغيف حواوشي بلدي محمص على الفحم ومحشو باللحم المفروم المتبل بالبصل والفلفل والبهارات.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥖 سعر الرغيف</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CASSEROLES (الطواجن) -->
+    <section class="menu-section" id="section-casseroles" data-category="casseroles">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">🍲</span>
+          <h2 class="section-title">الطواجن (روق على نفسك أنت تستحق)</h2>
+        </div>
+        <span class="section-badge-count">6 أصناف فخار</span>
+      </div>
+
+      <div class="dishes-grid">
+        <!-- طاجن بطاطس باللحمة -->
+        <article class="dish-card" data-id="t1" data-name="طاجن بطاطس باللحمة" data-desc="طاجن فخار بطاطس بقطع اللحم البلدي الطازج في الفرن" data-category="casseroles" data-tags="bestseller" data-price="250">
+          <div class="dish-image-wrap">
+            <img src="assets/tagine_potato.jpg" alt="طاجن بطاطس باللحمة" class="dish-img" loading="lazy" />
+            <div class="dish-badges">
+              <span class="badge badge-bestseller">⭐ طاجن فخار</span>
+            </div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">طاجن بطاطس باللحمة</h3>
+            <div class="dish-price"><span class="price-val">250</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">قطع لحم بلدي دايبة في صوص الطماطم والبطاطس المطهوة في الفرن الفخاري برائحة السمن والتوابل.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥔 لحم بلدي وبطاطس</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- طاجن بسلة باللحمة -->
+        <article class="dish-card" data-id="t2" data-name="طاجن بسلة باللحمة" data-desc="طاجن بسلة خضراء بالجزر وقطع اللحم البلدي المطهوة بفرن الفخار" data-category="casseroles" data-price="250">
+          <div class="dish-image-wrap">
+            <img src="assets/tagine_peas.jpg" alt="طاجن بسلة باللحمة" class="dish-img" loading="lazy" />
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">طاجن بسلة باللحمة</h3>
+            <div class="dish-price"><span class="price-val">250</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">بسلة خضراء سكرية مع الجزر والصلصة المسبكة وقطع اللحم البلدي الشهية.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥩 لحم بلدي وبسلة</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- طاجن بامية باللحمة -->
+        <article class="dish-card" data-id="t3" data-name="طاجن بامية باللحمة" data-desc="طاجن بامية باللحم البلدي والطشة المصرية في الفرن الفخاري" data-category="casseroles" data-tags="bestseller" data-price="250">
+          <div class="dish-image-wrap">
+            <img src="assets/tagine_okra.jpg" alt="طاجن بامية باللحمة" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-bestseller">&#11088; &#1575;&#1604;&#1571;&#1603;&#1579;&#1585; &#1591;&#1604;&#1576;&#1575;&#1613;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">طاجن بامية باللحمة</h3>
+            <div class="dish-price"><span class="price-val">250</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">بامية بلدي مقمعة مع الثوم والكزبرة والصلصة المسبكة وقطع لحم طرية غارقة بالصلصة.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🧄 طشة مصرية أصيلة</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- طاجن أرز معمر سادة -->
+        <article class="dish-card" data-id="t4" data-name="طاجن أرز معمر سادة" data-desc="أرز معمر فلاحي بالحليب والقشطة والسمن البلدي في طاجن فخار" data-category="casseroles" data-price="60">
+          <div class="dish-image-wrap">
+            <img src="assets/tagine_moamar.jpg" alt="طاجن أرز معمر سادة" class="dish-img" loading="lazy" />
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">طاجن أرز معمر سادة</h3>
+            <div class="dish-price"><span class="price-val">60</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">أرز معمر على الطريقة الفلاحية الأصلية بالحليب والقشطة والسمن البلدي مع وش دهبي محمر.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥛 قشطة وسمن بلدي</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- موزة بلدي -->
+        <article class="dish-card" data-id="t5" data-name="موزة بلدي" data-desc="قطعة موزة لحم بلدي دايبة مطهوة بعناية في الفرن" data-category="casseroles" data-tags="bestseller" data-price="300">
+          <div class="dish-image-wrap">
+            <img src="assets/tagine_shank.jpg" alt="موزة بلدي" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-bestseller">&#11088; &#1575;&#1604;&#1571;&#1603;&#1579;&#1585; &#1591;&#1604;&#1576;&#1575;&#1613;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">موزة بلدي</h3>
+            <div class="dish-price"><span class="price-val">300</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">موزة بلدي دايبة تفصل عن العظم بمجرد اللمس، غنية بالنكهات وعصارة اللحم الأصلية.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥩 لحم بلدي ممتاز</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- موزة ضاني -->
+        <article class="dish-card" data-id="t6" data-name="موزة ضاني" data-desc="موزة لحم ضاني فاخرة مطهوة على نار هادئة حتى الذوبان" data-category="casseroles" data-tags="bestseller" data-price="450">
+          <div class="dish-image-wrap">
+            <img src="assets/tagine_shank.jpg" alt="موزة ضاني" class="dish-img" loading="lazy" />
+            <div class="dish-badges"><span class="badge badge-bestseller">&#11088; &#1575;&#1604;&#1571;&#1603;&#1579;&#1585; &#1591;&#1604;&#1576;&#1575;&#1613;</span></div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">موزة ضاني فاخرة</h3>
+            <div class="dish-price"><span class="price-val">450</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">طبق العظماء! موزة ضاني بلدي مشوية ببطء في الفرن، طرية ولذيذة وتذوب في الفم.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>👑 موزة ضاني بلدي</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CREPES & EXTRAS -->
+    <section class="menu-section" id="section-crepes" data-category="crepes">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">🌯</span>
+          <h2 class="section-title">الكريب (هنروقلك مزاجك بتجربة مختلفة)</h2>
+        </div>
+        <span class="section-badge-count">9 أصناف كريب</span>
+      </div>
+
+      <div class="dishes-grid">
+        <!-- كريب بانية فريش -->
+        <article class="dish-card" data-id="c1" data-name="كريب بانية فريش" data-desc="قطع دجاج بانية طازجة مقرمشة مع الجبنة والخضار والصلصات" data-category="crepes" data-price="80">
+          <div class="dish-header">
+            <h3 class="dish-name">كريب بانية فريش</h3>
+            <div class="dish-price"><span class="price-val">80</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">صدور بانية دجاج فريش كرانشي مع الجبنة والزيتون والفلفل في كريب مقرمش محمص.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍗 بانية فريش</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- كريب فاهيتا -->
+        <article class="dish-card" data-id="c2" data-name="كريب فاهيتا" data-desc="فاهيتا دجاج متبلة بصوص الفاهيتا المكسيكي وفلفل ألوان وجبنة" data-category="crepes" data-tags="spicy" data-price="95">
+          <div class="dish-header">
+            <h3 class="dish-name">كريب فاهيتا</h3>
+            <div class="dish-price"><span class="price-val">95</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">شرائح دجاج فاهيتا متبلة مع الفلفل الألوان والبصل والجبنة وصوص الفاهيتا المميز.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🌶️ فاهيتا مكسيكي</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- كريب شاورما جريل -->
+        <article class="dish-card" data-id="c3" data-name="كريب شاورما جريل" data-desc="شاورما فراخ على الجريل بالبهارات الخاصة وموتزاريلا وتومية" data-category="crepes" data-tags="bestseller" data-price="95">
+          <div class="dish-header">
+            <h3 class="dish-name">كريب شاورما جريل</h3>
+            <div class="dish-price"><span class="price-val">95</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">شاورما فراخ جريل متبلة على الجريل مع الجبنة السايحة وصوص التومية.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🌯 شاورما جريل</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- كريب كفتة بلدي -->
+        <article class="dish-card" data-id="c4" data-name="كريب كفتة بلدي" data-desc="كفتة لحم بلدي مشوية داخل الكريب مع الجبنة والطحينة" data-category="crepes" data-price="95">
+          <div class="dish-header">
+            <h3 class="dish-name">كريب كفتة بلدي</h3>
+            <div class="dish-price"><span class="price-val">95</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">كفتة بلدي مشوية ومقطعة مع الجبنة الموتزاريلا ولمسة طحينة شرقية في كريب محمص.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥩 كفتة بلدي</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- كريب ميكس فراخ -->
+        <article class="dish-card" data-id="c5" data-name="كريب ميكس فراخ" data-desc="تشكيلة دجاج بانية واستربس وشاورما مع الجبنة والصلصات" data-category="crepes" data-tags="bestseller" data-price="105">
+          <div class="dish-header">
+            <h3 class="dish-name">كريب ميكس فراخ</h3>
+            <div class="dish-price"><span class="price-val">105</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">ميكس دجاج غني يجمع بين البانية والاستربس والشاورما مع طبقة جبنة مطاطية وصوص شِيكس.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍗 3 أنواع دجاج</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- كريب شِيكس -->
+        <article class="dish-card" data-id="c6" data-name="كريب شِيكس" data-desc="كريب المطعم المميز المحشو بأفخر أنواع المكونات والأجبان الخاصة" data-category="crepes" data-tags="bestseller" data-price="120">
+          <div class="dish-header">
+            <h3 class="dish-name">كريب شِيكس (المميز)</h3>
+            <div class="dish-price"><span class="price-val">120</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">الكريب الملكي الخاص باسم المطعم، مليان حشوة غنية وميكس أجبان ومكونات ممتازة لن تجدها إلا في شِيكس.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>👑 كريب شِيكس الخاص</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- كريب برجر حلواني -->
+        <article class="dish-card" data-id="c7" data-name="كريب برجر حلواني" data-desc="قطع برجر حلواني مع الجبنة والخضار في كريب مقرمش" data-category="crepes" data-price="65">
+          <div class="dish-header">
+            <h3 class="dish-name">كريب برجر حلواني</h3>
+            <div class="dish-price"><span class="price-val">65</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">برجر حلواني مشوي مع الجبنة والمايونيز والكاتشب في كريب ذهبي مقرمش.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍔 برجر حلواني</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- كريب بانية حلواني -->
+        <article class="dish-card" data-id="c8" data-name="كريب بانية حلواني" data-desc="بانية حلواني مقرمش مع الجبنة والصلصة" data-category="crepes" data-price="50">
+          <div class="dish-header">
+            <h3 class="dish-name">كريب بانية حلواني</h3>
+            <div class="dish-price"><span class="price-val">50</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">بانية حلواني مع الجبنة والفلفل والزيتون في كريب كرانشي لذيذ وسريع.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍗 بانية حلواني</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- كريب بطاطس -->
+        <article class="dish-card" data-id="c9" data-name="كريب بطاطس" data-desc="بطاطس مقلية ذهبية مع الجبنة والخضار والصلصات" data-category="crepes" data-price="50">
+          <div class="dish-header">
+            <h3 class="dish-name">كريب بطاطس</h3>
+            <div class="dish-price"><span class="price-val">50</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">بطاطس مقلية كرانشي مع الجبنة والكاتشب والمايونيز والزيتون في كريب محمص.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍟 بطاطس كرانشي</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+      </div>
+
+      <!-- إضافات الكريب (حليه زيادة) -->
+      <div style="margin-top: 30px; margin-bottom: 14px; border-top: 1px dashed rgba(255,183,3,0.3); padding-top: 20px;">
+        <h3 style="color: var(--gold-accent); font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+          <span>🧀</span>
+          <span>إضافات الكريب (حلّيه زيادة)</span>
+        </h3>
+      </div>
+
+      <div class="dishes-grid">
+        <article class="dish-card" data-id="ce1" data-name="إضافة جبنة موتزاريلا" data-desc="إضافة جبنة موتزاريلا إضافية سايحة ومطاطية للكريب" data-category="crepes" data-price="20">
+          <div class="dish-header">
+            <h3 class="dish-name">إضافة جبنة موتزاريلا</h3>
+            <div class="dish-price"><span class="price-val">20</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">جرعة مضاعفة من الجبنة الموتزاريلا السايحة لمطة مضاعفة.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🧀 إكسترا موتزاريلا</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <article class="dish-card" data-id="ce2" data-name="إضافة جبنة رومي" data-desc="إضافة جبنة رومي مبشورة بطعم حاد ومميز للكريب" data-category="crepes" data-price="20">
+          <div class="dish-header">
+            <h3 class="dish-name">إضافة جبنة رومي</h3>
+            <div class="dish-price"><span class="price-val">20</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">جبنة رومي مبشورة عالية الجودة تضيف طعم شرقي لا يقاوم.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🧀 إكسترا رومي</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <article class="dish-card" data-id="ce3" data-name="إضافة شيدر" data-desc="إضافة صوص أو شرائح جبنة شيدر دافئة للكريب" data-category="crepes" data-price="20">
+          <div class="dish-header">
+            <h3 class="dish-name">إضافة شيدر</h3>
+            <div class="dish-price"><span class="price-val">20</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">جبنة شيدر غنية ولذيذة تزيد الكريب طراوة ونكهة كريمية.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🧀 إكسترا شيدر</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <article class="dish-card" data-id="ce4" data-name="إضافة بطاطس" data-desc="إضافة بطاطس مقلية مقرمشة إضافية داخل الكريب" data-category="crepes" data-price="15">
+          <div class="dish-header">
+            <h3 class="dish-name">إضافة بطاطس للكريب</h3>
+            <div class="dish-price"><span class="price-val">15</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">كمية بطاطس إضافية مقلية كرانشي داخل الكريب.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍟 بطاطس إضافية</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SIDES & SALADS (الإضافات - أحلى ترويقة) -->
+    <section class="menu-section" id="section-sides" data-category="sides">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">🍟</span>
+          <h2 class="section-title">الإضافات والسلطات (أحلى ترويقة)</h2>
+        </div>
+        <span class="section-badge-count">9 أصناف</span>
+      </div>
+
+      <div class="dishes-grid">
+        <!-- أرز بسمتي (حجمين) -->
+        <article class="dish-card" data-base-id="s1" data-name="أرز بسمتي" data-desc="أرز بسمتي فاخر مبهر بخلطة شِيكس الخاصة" data-category="sides" data-tags="bestseller">
+          <div class="dish-header">
+            <h3 class="dish-name">أرز بسمتي</h3>
+            <div class="dish-price"><span class="price-val">40</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">أرز بسمتي حبة طويلة مبهر بالخلطة الصفراء اللذيذة:</p>
+          
+          <div class="portion-selector">
+            <span class="portion-selector-label">اختر الحجم:</span>
+            <button type="button" class="portion-pill" data-portion="صغير" data-price="25">صغير • 25 ج.م</button>
+            <button type="button" class="portion-pill active" data-portion="كبير" data-price="40">كبير • 40 ج.م</button>
+          </div>
+
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍚 أرز بسمتي فاخر</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- أرز أبيض بالشعرية (حجمين) -->
+        <article class="dish-card" data-base-id="s2" data-name="أرز أبيض بالشعرية" data-desc="أرز أبيض مصري بالشعرية المحمرة والسمن" data-category="sides">
+          <div class="dish-header">
+            <h3 class="dish-name">أرز أبيض بالشعرية</h3>
+            <div class="dish-price"><span class="price-val">40</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">أرز مصري مفلفل بالشعرية الذهبية والسمن البلدي:</p>
+          
+          <div class="portion-selector">
+            <span class="portion-selector-label">اختر الحجم:</span>
+            <button type="button" class="portion-pill" data-portion="صغير" data-price="20">صغير • 20 ج.م</button>
+            <button type="button" class="portion-pill active" data-portion="كبير" data-price="40">كبير • 40 ج.م</button>
+          </div>
+
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍚 أرز بالشعرية</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- مكرونة بشاميل -->
+        <article class="dish-card" data-id="s3" data-name="مكرونة بشاميل" data-desc="قطعة مكرونة فرن بالبشاميل الغني واللحم المفروم" data-category="sides" data-price="30">
+          <div class="dish-header">
+            <h3 class="dish-name">مكرونة بشاميل</h3>
+            <div class="dish-price"><span class="price-val">30</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">طبق مكرونة فرن بالبشاميل الكثيف اللذيذ واللحم المفروم المتبل.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍝 بشاميل فرن</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- شوربة لسان عصفور -->
+        <article class="dish-card" data-id="s4" data-name="شوربة لسان عصفور" data-desc="شوربة لسان عصفور ساخنة بمرقة الدجاج الغنية والليمون" data-category="sides" data-price="15">
+          <div class="dish-header">
+            <h3 class="dish-name">شوربة لسان عصفور</h3>
+            <div class="dish-price"><span class="price-val">15</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">شوربة ساخنة تدفي القلب بمرقة غنية ولسان عصفور محمر.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥣 شوربة ساخنة</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- سلطة كول سلو -->
+        <article class="dish-card" data-id="s5" data-name="سلطة كول سلو" data-desc="سلطة كول سلو فريش بالكرنب والجزر والدريسينج الحلو المنعش" data-category="sides" data-tags="bestseller" data-price="20">
+          <div class="dish-header">
+            <h3 class="dish-name">سلطة كول سلو</h3>
+            <div class="dish-price"><span class="price-val">20</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">كول سلو فريش ومقرمشة ومظبوطة، الرفيق الأساسي للبروست.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥗 كول سلو فريش</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- سلطة خضراء -->
+        <article class="dish-card" data-id="s6" data-name="سلطة خضراء" data-desc="سلطة بلدي خضراء طازجة بالخيار والطماطم والجرجير والليمون" data-category="sides" data-price="10">
+          <div class="dish-header">
+            <h3 class="dish-name">سلطة خضراء بلدي</h3>
+            <div class="dish-price"><span class="price-val">10</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">سلطة بلدي فريش بالخل والليمون والكمون لمرافقة المشويات.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥗 خضروات طازجة</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- سلطة طحينة -->
+        <article class="dish-card" data-id="s7" data-name="سلطة طحينة" data-desc="سلطة طحينة سمسم بلدي بالثوم والخل والليمون" data-category="sides" data-tags="bestseller" data-price="10">
+          <div class="dish-header">
+            <h3 class="dish-name">سلطة طحينة</h3>
+            <div class="dish-price"><span class="price-val">10</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">طحينة بلدي ناعمة متبلة بالخلطة الأصلية للمشويات والكفتة.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥣 طحينة بلدي</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- سلطة تركي -->
+        <article class="dish-card" data-id="s8" data-name="سلطة تركي" data-desc="سلطة تركي حارة وغنية بالنكهات" data-category="sides" data-tags="spicy" data-price="10">
+          <div class="dish-header">
+            <h3 class="dish-name">سلطة تركي</h3>
+            <div class="dish-price"><span class="price-val">10</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">سلطة بنكهة مميزة وحرارة خفيفة تفتح النفس مع الوجبات.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🌶️ سلطة تركي</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <!-- مخلل -->
+        <article class="dish-card" data-id="s9" data-name="مخلل مشكل" data-desc="مخلل بلدي مشكل ومقرمش" data-category="sides" data-price="10">
+          <div class="dish-header">
+            <h3 class="dish-name">مخلل مشكل</h3>
+            <div class="dish-price"><span class="price-val">10</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">تشكيلة مخللات بلدية مقرمشة تروق الوجبة.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥒 مخلل بلدي</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 6: DRINKS (المشروبات) -->
+    <section class="menu-section" id="section-drinks" data-category="drinks">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">🥤</span>
+          <h2 class="section-title">مشروبات منعشة</h2>
+        </div>
+        <span class="section-badge-count">3 أصناف</span>
+      </div>
+
+      <div class="dishes-grid">
+        <article class="dish-card" data-id="d1" data-name="كوكاكولا / بيبسي كانز" data-desc="كانز مثلجة 330 مل" data-category="drinks" data-price="20">
+          <div class="dish-header">
+            <h3 class="dish-name">بيبسي / كوكاكولا كانز</h3>
+            <div class="dish-price"><span class="price-val">20</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">مشروب غازي مثلج 330 مل لإنعاش حواسك مع الوجبة السخنة.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥤 330 مل</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <article class="dish-card" data-id="d2" data-name="شويبس كانز" data-desc="كانز شويبس منعشة 330 مل (جولد / رمان)" data-category="drinks" data-price="20">
+          <div class="dish-header">
+            <h3 class="dish-name">شويبس كانز (جولد / رمان)</h3>
+            <div class="dish-price"><span class="price-val">20</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">شويبس فاخرة مثلجة بالنكهة المفضلة لديك.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🥤 330 مل</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+
+        <article class="dish-card" data-id="d3" data-name="مياه معدنية صغيرة" data-desc="مياه معدنية نقية وباردة" data-category="drinks" data-price="10">
+          <div class="dish-header">
+            <h3 class="dish-name">مياه معدنية صغيرة</h3>
+            <div class="dish-price"><span class="price-val">10</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">زجاجة مياه معدنية نقية مثلجة.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>💧 مياه نقية</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       BOTTOM STICKY ACTION & SUMMARY BAR
+       ========================================== -->
+  <aside class="bottom-floating-bar" id="bottomBar">
+    <div class="floating-inner">
+      <!-- Call Buttons Group -->
+      <div class="call-options-group">
+        <a href="tel:01033326066" class="quick-call-btn voda" id="btnCallVodaBottom">
+          <span>📞</span>
+          <span>فودافون <bdi class="phone-num">010 333 2 60 66</bdi></span>
+        </a>
+        <a href="tel:01111168516" class="quick-call-btn orange" id="btnCallOrangeBottom">
+          <span>📞</span>
+          <span>اتصالات <bdi class="phone-num">011 111 68 516</bdi></span>
+        </a>
+      </div>
+
+      <!-- Live Bill Calculator Drawer Trigger -->
+      <button class="bill-summary-trigger" id="billSummaryTrigger" title="عرض ملخص الوجبات المختارة">
+        <span>🧾 احسب فاتورتك</span>
+        <span class="bill-badge-count" id="bottomBarCount">0</span>
+        <span id="bottomBarTotal">0 ج.م</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       MODAL: BILL CALCULATOR DRAWER
+       ========================================== -->
+  <div class="modal-overlay" id="billModal" role="dialog" aria-modal="true" aria-labelledby="billModalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="billModalTitle">
+          <span>🧾</span>
+          <span>ملخص حساب وجباتك</span>
+        </h3>
+        <button class="modal-close-btn" id="billModalClose" title="إغلاق">✕</button>
+      </div>
+
+      <div class="selected-items-list" id="selectedItemsList">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+      <div class="bill-total-bar">
+        <span class="bill-total-label">الإجمالي التقريبي:</span>
+        <span class="bill-total-val" id="modalBillTotal">0 ج.م</span>
+      </div>
+
+      <div class="modal-actions-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 8px;">
+        <button class="action-btn btn-call-primary" id="copyBillBtn">
+          <span>📋</span>
+          <span>نسخ الطلب</span>
+        </button>
+        <button class="action-btn btn-outline" id="whatsappBillBtn" style="border-color: #25D366; color: #25D366;">
+          <span>💬</span>
+          <span>طلب عبر واتساب</span>
+        </button>
+      </div>
+
+      <!-- Direct Call Buttons from Inside Bill Drawer -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px;">
+        <a href="tel:01033326066" class="quick-call-btn voda" style="text-align: center; justify-content: center; font-size: 0.82rem; padding: 10px 4px; text-decoration: none;">
+          <span>📞 فودافون</span>
+        </a>
+        <a href="tel:01111168516" class="quick-call-btn orange" style="text-align: center; justify-content: center; font-size: 0.82rem; padding: 10px 4px; text-decoration: none;">
+          <span>📞 اتصالات</span>
+        </a>
+      </div>
+
+      <button class="action-btn btn-outline" id="clearBillBtn" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 8px; opacity: 0.8;">
+        <span>🗑️ تفريغ القائمة بالكامل</span>
+      </button>
+
+      <div style="margin-top: 12px; text-align: center; font-size: 0.8rem; color: #94a3b8;">
+        💡 <em>يمكنك نسخ الطلب وإملاؤه للكاشير هاتفياً، أو إرساله مباشرة بنقرة واحدة عبر الواتساب.</em>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL: QR CODE FOR PRINTING & SHARING
+       ========================================== -->
+  <div class="modal-overlay" id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrModalTitle">
+    <div class="modal-card" style="text-align: center;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="qrModalTitle">
+          <span>📱</span>
+          <span>كود QR للمنيو الإلكتروني</span>
+        </h3>
+        <button class="modal-close-btn" id="qrModalClose" title="إغلاق">✕</button>
+      </div>
+
+      <!-- Printable Table-Card Preview -->
+      <div class="qr-preview-box">
+        <div style="font-size: 0.85rem; font-weight: 800; color: #64748b; margin-bottom: 8px;">امسح بالكاميرا لتصفح المنيو</div>
+        <div id="qrContainer">
+          <!-- QR image rendered via JS -->
+        </div>
+        <div class="qr-card-brand">CHicks • شِيكس</div>
+        <div class="qr-card-note">طامية - الفيوم • دليفري: <bdi class="phone-num">010 333 2 60 66</bdi></div>
+      </div>
+
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+        يمكنك فتح الكود وتحميله لطباعته على طاولات الصالة أو ستيكرات الدليفري والعلب.
+      </p>
+
+      <div class="modal-actions-grid">
+        <button class="action-btn btn-call-primary" id="downloadQrBtn">
+          <span>⬇️</span>
+          <span>تحميل الصورة</span>
+        </button>
+        <button class="action-btn btn-outline" onclick="window.print()" id="printQrBtn">
+          <span>🖨️</span>
+          <span>طباعة كارت الطاولة</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FOOTER SECTION
+       ========================================== -->
+  <footer class="footer-wrap">
+    <div class="container">
+      <div class="footer-social-links">
+        <a href="https://www.facebook.com/profile.php?id=61595725976308&locale=ar_AR" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="صفحة الفيسبوك">
+          <span>f</span>
+        </a>
+        <a href="tel:01033326066" class="social-circle-link" title="اتصال فودافون">
+          <span>📞</span>
+        </a>
+        <a href="tel:01111168516" class="social-circle-link" title="اتصال اتصالات">
+          <span>📱</span>
+        </a>
+        <button class="social-circle-link open-qr-modal" title="QR Code">
+          <span>🔳</span>
+        </button>
+      </div>
+
+      <p style="font-weight: 800; color: #fff; margin-bottom: 4px;">مطعم CHicks (شِيكس) • The King of Crunch</p>
+      <p style="margin-bottom: 10px;">الفيوم - مركز طامية - بجوار منتجع الحياة</p>
+      <p style="font-size: 0.78rem; opacity: 0.7;">أرقام الدليفري: 01033326066 - 01111168516 • جميع الحقوق محفوظة &copy; 2026</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
