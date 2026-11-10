@@ -453,11 +453,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // -------------------------------------------------------------
-  // 6. Category Scroll-Spy for Sticky Navigation
+  // 6. Category Scroll-Spy for Sticky Navigation (Horizontal-only safe)
   // -------------------------------------------------------------
+  const categoryPillsBar = document.getElementById('categoryPillsBar');
+  let lastSpyCategory = null;
+
+  function scrollPillHorizontally(pill) {
+    if (!categoryPillsBar || !pill) return;
+    const barRect = categoryPillsBar.getBoundingClientRect();
+    const pillRect = pill.getBoundingClientRect();
+    const offset = (pillRect.left - barRect.left) - (barRect.width / 2) + (pillRect.width / 2);
+    if (Math.abs(offset) > 8) {
+      categoryPillsBar.scrollBy({ left: offset, behavior: 'smooth' });
+    }
+  }
+
   const observerOptions = {
     root: null,
-    rootMargin: '-100px 0px -70% 0px',
+    rootMargin: '-120px 0px -65% 0px',
     threshold: 0
   };
 
@@ -467,10 +480,13 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const cat = entry.target.getAttribute('data-category');
+        if (cat === lastSpyCategory) return;
+        lastSpyCategory = cat;
+
         categoryPills.forEach(pill => {
           if (pill.getAttribute('data-category') === cat) {
             pill.classList.add('active');
-            pill.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            scrollPillHorizontally(pill);
           } else if (pill.getAttribute('data-category') !== 'all') {
             pill.classList.remove('active');
           }
@@ -517,8 +533,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let isConfigured = false;
     let heartbeatTimer = null;
 
-    async function sendHeartbeat() {
-      if (document.visibilityState === 'hidden') return;
+    async function sendHeartbeat(force = false) {
+      if (!force && document.visibilityState === 'hidden') return;
       try {
         const res = await fetch(endpoint, {
           method: 'POST',
@@ -557,12 +573,12 @@ document.addEventListener('DOMContentLoaded', () => {
       navigator.sendBeacon(endpoint, payload);
     }
 
-    sendHeartbeat();
-    heartbeatTimer = setInterval(sendHeartbeat, 15000);
+    sendHeartbeat(true);
+    heartbeatTimer = setInterval(() => sendHeartbeat(false), 15000);
 
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible') {
-        sendHeartbeat();
+        sendHeartbeat(true);
       }
     });
 
