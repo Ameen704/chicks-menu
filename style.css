@@ -56,6 +56,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -154,7 +155,16 @@ button {
   margin: 0 auto;
 }
 
-/* Restaurant Status Badge */
+/* Restaurant Status & Live Viewers Badges */
+.status-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
 .status-pill {
   display: inline-flex;
   align-items: center;
@@ -166,8 +176,30 @@ button {
   font-weight: 700;
   padding: 4px 14px;
   border-radius: var(--radius-full);
-  margin-bottom: 16px;
   box-shadow: 0 0 15px rgba(34, 197, 94, 0.2);
+}
+
+.live-viewers-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 158, 11, 0.14);
+  border: 1px solid rgba(255, 183, 3, 0.45);
+  color: #fcd34d;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+}
+
+.live-eye-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #fbbf24;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #f59e0b;
+  animation: pulse-dot 1.8s infinite;
 }
 
 .status-dot {
@@ -257,9 +289,10 @@ button {
 
 .brand-pillars {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 6px 10px;
   color: var(--gold-light);
   font-size: 0.9rem;
   font-weight: 700;
@@ -1193,10 +1226,33 @@ button {
 }
 
 /* Responsive adjustments */
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   body {
     padding-bottom: calc(135px + env(safe-area-inset-bottom, 0px));
   }
+  .floating-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .call-options-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .quick-call-btn {
+    padding: 8px 6px;
+    font-size: 0.78rem;
+    gap: 4px;
+    min-width: 0;
+  }
+  .bill-summary-trigger {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
   .brand-arabic {
     font-size: 2.1rem;
   }
@@ -1206,16 +1262,8 @@ button {
   .dish-image-wrap {
     height: 160px;
   }
-  .floating-inner {
-    flex-direction: column;
-    gap: 8px;
-  }
-  .call-options-group {
-    width: 100%;
-  }
-  .bill-summary-trigger {
-    width: 100%;
-    justify-content: center;
+  .quick-call-btn {
+    font-size: 0.73rem;
   }
 }
 

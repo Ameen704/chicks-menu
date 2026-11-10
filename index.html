@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
@@ -29,10 +29,16 @@
     <div class="hero-banner-backdrop" style="background-image: url('assets/broast_family.jpg');"></div>
 
     <div class="container hero-content">
-      <!-- Status Badge -->
-      <div class="status-pill">
-        <span class="status-dot"></span>
-        <span>المطعم مفتوح الآن • طلبات الدليفري والصالة متاحة</span>
+      <!-- Status & Live Viewers Row -->
+      <div class="status-badges-row">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>المطعم مفتوح الآن • طلبات الدليفري والصالة متاحة</span>
+        </div>
+        <div class="live-viewers-pill" id="liveViewersPill" style="display: none;" aria-live="polite" title="عدد الأشخاص المتصفحين للمنيو الآن">
+          <span class="live-eye-dot"></span>
+          <span id="liveViewersText">1 يتصفح المنيو الآن</span>
+        </div>
       </div>
 
       <!-- Brand Identity -->
@@ -123,7 +129,7 @@
         <button class="cat-pill" data-category="casseroles">
           <span>🍲</span>
           <span>الطواجن</span>
-          <span class="cat-pill-count">6</span>
+          <span class="cat-pill-count">7</span>
         </button>
         <button class="cat-pill" data-category="crepes">
           <span>🌯</span>
@@ -637,7 +643,7 @@
           <span class="section-icon">🍲</span>
           <h2 class="section-title">الطواجن (روق على نفسك أنت تستحق)</h2>
         </div>
-        <span class="section-badge-count">6 أصناف فخار</span>
+        <span class="section-badge-count">7 أصناف فخار</span>
       </div>
 
       <div class="dishes-grid">
@@ -715,8 +721,33 @@
             <button class="btn-add-initial"><span>+ احسبها</span></button>
           </div>
         </article>
+        <!-- طاجن العكاوي -->
+        <article class="dish-card" data-id="t7" data-name="طاجن العكاوي"
+          data-desc="طاجن عكاوي بلدي بالبصل والفلفل الألوان والصلصة المسبكة مطهو في الفرن الفخاري"
+          data-category="casseroles" data-tags="bestseller" data-price="250">
+          <div class="dish-image-wrap">
+            <img src="assets/tagine_akawi.webp" alt="طاجن العكاوي" class="dish-img" loading="lazy" />
+            <div class="dish-badges">
+              <span class="badge badge-bestseller">⭐ الأكثر طلباً</span>
+            </div>
+          </div>
+          <div class="dish-header">
+            <h3 class="dish-name">طاجن العكاوي</h3>
+            <div class="dish-price"><span class="price-val">250</span> <span class="currency-label">ج.م</span></div>
+          </div>
+          <p class="dish-desc">عكاوي بلدي دايبة مطهوة ببطء في الطاجن الفخاري مع البصل المكرمل والفلفل والصلصة المسبكة.</p>
+          <div class="dish-footer">
+            <div class="dish-tags"><span>🍲 عكاوي فخار بالفرن</span></div>
+            <div class="calc-qty-control" style="display: none;">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+            <button class="btn-add-initial"><span>+ احسبها</span></button>
+          </div>
+        </article>
 
-        <!-- طاجن أرز معمر سادة -->
+<!-- طاجن أرز معمر سادة -->
         <article class="dish-card" data-id="t4" data-name="طاجن أرز معمر سادة"
           data-desc="أرز معمر فلاحي بالحليب والقشطة والسمن البلدي في طاجن فخار" data-category="casseroles"
           data-price="60">

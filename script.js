@@ -480,4 +480,94 @@ document.addEventListener('DOMContentLoaded', () => {
   }, observerOptions);
 
   menuSections.forEach(sec => observer.observe(sec));
+
+  // -------------------------------------------------------------
+  // 7. Real-Time Live Viewers Counter (Vercel API + Upstash Redis)
+  // -------------------------------------------------------------
+  const liveViewersPill = document.getElementById('liveViewersPill');
+  const liveViewersText = document.getElementById('liveViewersText');
+
+  function getViewerSessionId() {
+    const storageKey = 'chicks_live_session_id';
+    try {
+      let existing = sessionStorage.getItem(storageKey);
+      if (existing && /^[a-zA-Z0-9_-]{8,64}$/.test(existing)) return existing;
+      const generated = (window.crypto && typeof window.crypto.randomUUID === 'function')
+        ? window.crypto.randomUUID()
+        : `v_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 10)}`;
+      sessionStorage.setItem(storageKey, generated);
+      return generated;
+    } catch {
+      return `v_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 10)}`;
+    }
+  }
+
+  function formatViewerLabel(count) {
+    if (count <= 1) return '👁️ 1 يتصفح المنيو الآن';
+    if (count === 2) return '👁️ 2 يتصفحان المنيو الآن';
+    return `👁️ ${count} يتصفحون المنيو الآن`;
+  }
+
+  function initLiveViewersTracker() {
+    if (!liveViewersPill || !liveViewersText) return;
+    if (window.location.protocol === 'file:') return;
+
+    const endpoint = '/api/live-users';
+    const sessionId = getViewerSessionId();
+    let isConfigured = false;
+    let heartbeatTimer = null;
+
+    async function sendHeartbeat() {
+      if (document.visibilityState === 'hidden') return;
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ sessionId, action: 'ping' }),
+          cache: 'no-store'
+        });
+        if (!res.ok) return;
+
+        const data = await res.json();
+        if (data && data.configured === false) {
+          liveViewersPill.style.display = 'none';
+          if (heartbeatTimer) {
+            clearInterval(heartbeatTimer);
+            heartbeatTimer = null;
+          }
+          return;
+        }
+
+        if (data && data.configured === true && typeof data.count === 'number') {
+          isConfigured = true;
+          liveViewersText.textContent = formatViewerLabel(data.count);
+          liveViewersPill.style.display = 'inline-flex';
+        }
+      } catch {
+        // Ignore transient network drops; next heartbeat retries automatically
+      }
+    }
+
+    function sendLeaveBeacon() {
+      if (!isConfigured || !navigator.sendBeacon) return;
+      const payload = new Blob(
+        [JSON.stringify({ sessionId, action: 'leave' })],
+        { type: 'application/json' }
+      );
+      navigator.sendBeacon(endpoint, payload);
+    }
+
+    sendHeartbeat();
+    heartbeatTimer = setInterval(sendHeartbeat, 15000);
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        sendHeartbeat();
+      }
+    });
+
+    window.addEventListener('pagehide', sendLeaveBeacon);
+  }
+
+  initLiveViewersTracker();
 });
